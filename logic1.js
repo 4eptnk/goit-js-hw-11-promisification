@@ -1,4 +1,4 @@
-const delay = ms => {
+const delay = (ms) => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(ms);
@@ -7,8 +7,8 @@ const delay = ms => {
   return promise;
 };
 
-const logger = time => console.log(`Resolved after ${time}ms`);
+const loggerFirst = (time) => console.log(`Resolved after ${time}ms`);
 
-delay(2000).then(logger);
-delay(1000).then(logger);
-delay(1500).then(logger);
+delay(2000).then(loggerFirst);
+delay(1000).then(loggerFirst);
+delay(1500).then(loggerFirst);
